@@ -1,0 +1,14 @@
+{
+  "appId": "eu.prestaterre.pulpo",
+  "appName": "Pulpo",
+  "webDir": "../www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": true,
+      "backgroundColor": "#0f172a"
+    }
+  }
+}

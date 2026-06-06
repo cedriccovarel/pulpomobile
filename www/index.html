@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#111827" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Pulpo" />
+  <link rel="manifest" href="../manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="../icons/icon-180.png" />
+  <title>Pulpo Mobile</title>
+  <style>
+    html, body { height:100%; margin:0; background:#0f172a; color:#fff; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    .shell { min-height:100%; display:grid; place-items:center; padding:24px; text-align:center; }
+    .card { max-width:640px; border:1px solid rgba(255,255,255,.14); border-radius:28px; background:linear-gradient(145deg,rgba(255,255,255,.10),rgba(255,255,255,.04)); padding:28px; box-shadow:0 28px 80px rgba(0,0,0,.38); }
+    h1 { margin:0 0 8px; font-size:42px; letter-spacing:-.06em; }
+    p { margin:8px 0; color:#cbd5e1; line-height:1.45; }
+    a, button { display:inline-flex; align-items:center; justify-content:center; gap:8px; margin-top:18px; min-height:48px; border-radius:999px; padding:0 18px; border:0; background:#fff; color:#0f172a; font-weight:900; text-decoration:none; cursor:pointer; }
+    small { display:block; margin-top:16px; color:#94a3b8; }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="card">
+      <h1>Pulpo</h1>
+      <p>Pack mobile prêt pour transformer Pulpo en PWA ou en app native Capacitor.</p>
+      <p>Pour une vraie release autonome, remplace ce fichier par ton dernier <strong>index.html mobile</strong> Pulpo.</p>
+      <a href="https://cedriccovarel.github.io/pulpoflowbycc/">Ouvrir Pulpo web</a>
+      <small>Ce shell sert de garde-fou si le fichier applicatif n’a pas encore été copié dans <code>www/index.html</code>.</small>
+    </section>
+  </main>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('../sw.js').catch(() => {}));
+    }
+  </script>
+</body>
+</html>
