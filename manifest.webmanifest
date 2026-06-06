@@ -1,16 +1,30 @@
 {
+  "id": "/pulpomobile/",
   "name": "Pulpo",
   "short_name": "Pulpo",
-  "description": "Atelier visuel de données et de décisions.",
-  "start_url": "./www/index.html",
+  "description": "Atelier visuel de logique, de données et de décisions.",
+  "lang": "fr-FR",
+  "dir": "ltr",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
   "orientation": "any",
   "background_color": "#0f172a",
   "theme_color": "#111827",
+  "categories": ["productivity", "business", "utilities"],
   "icons": [
+    { "src": "icons/icon-180.png", "sizes": "180x180", "type": "image/png", "purpose": "any" },
     { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
     { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
     { "src": "icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "screenshots": [
+    { "src": "screenshots/mobile-home.png", "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "Pulpo sur mobile" },
+    { "src": "screenshots/desktop-home.png", "sizes": "1920x1080", "type": "image/png", "form_factor": "wide", "label": "Pulpo sur ordinateur" }
+  ],
+  "shortcuts": [
+    { "name": "Nouveau projet", "short_name": "Nouveau", "description": "Démarrer un nouveau projet Pulpo", "url": "./?action=new", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }] },
+    { "name": "Aide Pulpo", "short_name": "Aide", "description": "Ouvrir Pulpo et consulter l’aide", "url": "./?action=help", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" }] }
   ]
 }

@@ -2,7 +2,18 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#111827" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Pulpo" />
+  <meta name="application-name" content="Pulpo" />
+  <meta name="description" content="Atelier visuel de logique, de données et de décisions." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="icons/icon-180.png" />
   <title>Pulpo by Cc</title>
   <style>
 :root {
@@ -10554,6 +10565,17 @@ try { window.__pulpoTest = { createProject, renameProject, duplicateProject, del
     document.addEventListener('DOMContentLoaded', bindToolbarTabs, { once: true });
   }
   window.activateToolbarTabV92 = activateToolbarTab;
+})();
+</script>
+
+<script>
+(function registerPulpoServiceWorker(){
+  if (!('serviceWorker' in navigator)) return;
+  window.addEventListener('load', function(){
+    navigator.serviceWorker.register('./sw.js', { scope: './' }).catch(function(err){
+      console.warn('Pulpo service worker non enregistré', err);
+    });
+  });
 })();
 </script>
 </body>
